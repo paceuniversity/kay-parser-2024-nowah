@@ -92,6 +92,7 @@ public class ConcreteSyntax {
 		if(token.getValue().equals("integer") || token.getValue().equals("bool")){
 			t = new Type(token.getValue());
 			token = input.nextToken();
+		}
 		else{
 			throw new RuntimeException(SyntaxError("integer | bool"));
 		}
