@@ -82,13 +82,19 @@ public class ConcreteSyntax {
 		// TODO TO BE COMPLETED
 		// Type --> integer | bool
 		Type t = null;
-		if (token.getValue().equals("int"))
+		/*if (token.getValue().equals("int"))
 			t = new Type(token.getValue());
 		else if (token.getValue().equals("bool"))
 			t = new Type(token.getValue());
 		else
 			throw new RuntimeException(SyntaxError("int | boolean"));
-		token = input.nextToken(); // pass over the type
+		token = input.nextToken();*/ // pass over the type
+		if(token.getValue().equals("integer") || token.getValue().equals("bool")){
+			t = new Type(token.getValue());
+			token = input.nextToken();
+		else{
+			throw new RuntimeException(SyntaxError("integer | bool"));
+		}
 		return t;
 	}
 
