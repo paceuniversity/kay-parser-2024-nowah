@@ -313,7 +313,7 @@ public class ConcreteSyntax {
 		match(")");
 		c.thenbranch = statement(); //parse true-branch statement
 
-		if(token.getType().equals("else")){ //checks for 'else' keyword
+		if(token.getValue().equals("else")){ //checks for 'else' keyword
 			token = input.nextToken(); //match "else"
 			//match("else");
 			c.elsebranch = statement(); //parse the false-branch
